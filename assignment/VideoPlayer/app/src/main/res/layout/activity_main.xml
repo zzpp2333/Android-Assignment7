@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/videoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/videoView"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="false"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/play_button"
+                    android:textSize="18sp"/>
+
+                <Button
+                    android:id="@+id/buttonPause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/pause_button"
+                    android:textSize="18sp"/>
+
+                <Button
+                    android:id="@+id/buttonSelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/select_button"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
