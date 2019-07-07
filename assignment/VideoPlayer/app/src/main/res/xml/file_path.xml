@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!--Android/data/包名/-->
+    <external-path path="." name="DCIM/Camera" />
+    <external-path path="Android/data/com.bytedance.videoplayer" name="files_root" />
+    <external-path path="." name="com.bytedance.videoplayer" />
+    <external-path path="./DCIM/Camera" name="external" />
+</paths>

@@ -1,13 +1,16 @@
 package com.bytedance.videoplayer;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.drm.DrmStore;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -21,9 +24,6 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
-
-    private static final int PICK_VIDEO = 2;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,12 +77,14 @@ public class MainActivity extends AppCompatActivity {
         buttonSelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent selectIntent = new Intent();
+
+                startActivity(new Intent(MainActivity.this, VideoActivity.class));
+                /*Intent selectIntent = new Intent();
                 selectIntent.setType("video/*");
                 selectIntent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(Intent.createChooser(selectIntent,"Select Video"), 1);
 
-                Uri mySelectedVideo = selectIntent.getData();
+                Uri mySelectedVideo = selectIntent.getData();*/
                 //Log.i("uri::::",mySelectedVideo.toString());
                 /*Intent playIntent = new Intent(Intent.ACTION_VIEW);
                 playIntent.setDataAndType(mySelectedVideo,"video/mp4");
